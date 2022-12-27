@@ -16,15 +16,52 @@ val myStr2 = MyString() - пустая строка
 7) myStr1.asLowercase() - возвращает строку, все символы которой записаны в нижнем регистре
  */
 
-class MyString (val string: String="") {
+class MyString {
 
-    fun printMyStrint() {
-        println(string)
+    private var innerString = ""
+
+    constructor(string: String)  {
+        this.innerString = string
+    }
+
+    constructor() {
+        this.innerString = ""
+    }
+
+    fun printMyString (){
+        println(innerString)
     }
 
     fun count(): Int{
-        return string.length
+        var count = 0
+        for(i in innerString) {
+            count++
+        }
+        return count
     }
 
+    fun reverse(): String{
+
+        val endIndex = MyString(innerString).count()
+        var newString = ""
+
+        for (i in endIndex-1 downTo 0)
+            newString += innerString[i]
+
+        return newString
+    }
+
+    fun uppercase() : String {
+
+        var newUpperString = ""
+
+        for (char in innerString) {
+            if (char.code !in 65..90) {
+                newUpperString += (char.code - 32).toChar()
+            } else newUpperString += char
+
+        }
+        return newUpperString
+    }
 
 }
