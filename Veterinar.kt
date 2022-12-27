@@ -1,6 +1,6 @@
-open class Veterinar {
+class Veterinar {
 
-  open fun treatAnimal(animal: Animal) {
+  fun treatAnimal(animal: Animal) {
         println("${animal.food} ${animal.location}")
     }
 }
