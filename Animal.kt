@@ -17,7 +17,7 @@ Dog, Cat, Horse переопределяют методы makeNoise, eat соо�
          ) {
 
     open fun makeNoise(){
-         println("Животное спит")
+         println("Животное шумит")
      }
 
     open fun eat(){

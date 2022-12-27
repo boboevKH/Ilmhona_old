@@ -3,7 +3,7 @@ class Horse: Animal("сено","суша") {
     val name: String = "Лощадь"
 
     override fun makeNoise() {
-        println("${name} спит")
+        println("${name} икает")
     }
 
     override fun eat() {
@@ -11,6 +11,6 @@ class Horse: Animal("сено","суша") {
     }
 
     override fun sleep() {
-        println("Спит")
+        println("${name} спит")
     }
 }
